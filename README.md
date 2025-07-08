@@ -1,4 +1,4 @@
-# Sistema IBVS Mejorado con Redes Neuronales
+# Sistema IBVS Mejorado con Redes Neuronales -- Iván Monzón Catalán
 
 Sistema de control visual basado en imágenes (IBVS) mejorado con redes neuronales que logra **97.5% de mejora** sobre librería usada en clase.
 
