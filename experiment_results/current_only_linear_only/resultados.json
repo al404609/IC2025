@@ -1,0 +1,27 @@
+{
+  "experiment": {
+    "name": "current_only_linear_only",
+    "feature_config": "current_only",
+    "target_config": "linear_only",
+    "model_type": "fnn",
+    "timestamp": "2025-07-06T08:49:01.995494"
+  },
+  "metrics": {
+    "improvement_percent": -126.7,
+    "ml_better": false
+  },
+  "files": {
+    "model_files": [
+      "fnn_best.pth",
+      "fnn_feature_scaler.pkl",
+      "fnn_target_scaler.pkl",
+      "fnn_metadata.json"
+    ],
+    "graphics": [
+      "classical_ibvs_results.png",
+      "ml_ibvs_results.png",
+      "ibvs_comparison.png",
+      "error_comparison_detailed.png"
+    ]
+  }
+}

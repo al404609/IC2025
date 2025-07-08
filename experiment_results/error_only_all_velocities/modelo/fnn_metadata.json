@@ -1,0 +1,34 @@
+{
+    "model_type": "fnn",
+    "model_config": {
+        "input_size": 8,
+        "hidden_sizes": [
+            64,
+            32
+        ],
+        "output_size": 6,
+        "dropout_rate": 0.3,
+        "use_batch_norm": true
+    },
+    "training_config": {
+        "batch_size": 512,
+        "num_epochs": 150,
+        "learning_rate": 0.0005,
+        "val_split": 0.2,
+        "device": "cuda"
+    },
+    "training_metrics": {
+        "num_epochs": 10,
+        "best_val_loss": 0.5165310815663227,
+        "best_epoch": 5,
+        "final_train_loss": 0.5819413659930184,
+        "final_val_loss": 0.5174889419216584,
+        "avg_epoch_time": 14.614525437355042,
+        "total_time": 146.14525437355042
+    },
+    "paths": {
+        "feature_scaler": "/home/usuario/RVC3-python/ivan/test_features/error_only_all_velocities_fnn/fnn_feature_scaler.pkl",
+        "target_scaler": "/home/usuario/RVC3-python/ivan/test_features/error_only_all_velocities_fnn/fnn_target_scaler.pkl",
+        "best_model": "/home/usuario/RVC3-python/ivan/test_features/error_only_all_velocities_fnn/fnn_best.pth"
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "experiment": {
+    "name": "current_desired_all_velocities",
+    "feature_config": "current_desired",
+    "target_config": "all_velocities",
+    "model_type": "fnn",
+    "timestamp": "2025-07-06T08:57:01.458088"
+  },
+  "metrics": {},
+  "files": {
+    "model_files": [
+      "fnn_best.pth",
+      "fnn_feature_scaler.pkl",
+      "fnn_target_scaler.pkl",
+      "fnn_metadata.json"
+    ],
+    "graphics": [
+      "classical_ibvs_results.png",
+      "ml_ibvs_results.png",
+      "ibvs_comparison.png",
+      "error_comparison_detailed.png"
+    ]
+  }
+}

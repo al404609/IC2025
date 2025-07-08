@@ -1,0 +1,24 @@
+{
+  "experiment": {
+    "name": "error_only_all_velocities",
+    "feature_config": "error_only",
+    "target_config": "all_velocities",
+    "model_type": "fnn",
+    "timestamp": "2025-07-06T09:02:17.145877"
+  },
+  "metrics": {},
+  "files": {
+    "model_files": [
+      "fnn_best.pth",
+      "fnn_feature_scaler.pkl",
+      "fnn_target_scaler.pkl",
+      "fnn_metadata.json"
+    ],
+    "graphics": [
+      "classical_ibvs_results.png",
+      "ml_ibvs_results.png",
+      "ibvs_comparison.png",
+      "error_comparison_detailed.png"
+    ]
+  }
+}
