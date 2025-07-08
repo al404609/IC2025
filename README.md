@@ -1,6 +1,6 @@
 # Sistema IBVS Mejorado con Redes Neuronales
 
-Sistema de control visual basado en imágenes (IBVS) mejorado con redes neuronales que logra **97.5% de mejora** sobre métodos clásicos.
+Sistema de control visual basado en imágenes (IBVS) mejorado con redes neuronales que logra **97.5% de mejora** sobre librería usada en clase.
 
 ## Instalación Rápida
 
@@ -9,7 +9,7 @@ Sistema de control visual basado en imágenes (IBVS) mejorado con redes neuronal
 pip install -r requirements.txt
 
 # Verificar instalación
-python -c "import torch; import numpy; print('✅ Todo instalado')"
+python -c "import torch; import numpy; print('Todo instalado')"
 ```
 
 ## Uso Básico
@@ -93,7 +93,7 @@ python utils/trainer.py --eval-only --model results/best_model.pth
 python utils/plot_results.py --model results/best_model.pth
 ```
 
-## Resultados Principales
+## Resultados 
 
 - **Mejor configuración**: `current_desired` → `linear_only`
 - **Arquitectura**: FNN [16] → [64] → [32] → [3]
@@ -118,22 +118,3 @@ pip install robotics-toolbox-python
 python data/dataset_generator.py  # Generar datos primero
 ```
 
-### Simulación muy lenta
-```bash
-# Usar modelo más simple
-python core/simulation.py --model results/best_model.pth --fast
-
-# Reducir resolución
-python core/simulation.py --model results/best_model.pth --low-res
-```
-
-## Contacto y Soporte
-
-Para dudas o problemas:
-1. Revisar configuración en `config/settings.py`
-2. Verificar que los datos estén generados en `data/generated/`
-3. Comprobar que el modelo entrenado exista en `results/`
-
----
-
-**Nota**: Este sistema está optimizado para la configuración `current_desired` → `linear_only` que ofrece el mejor rendimiento. Para experimentos, modificar `config/settings.py` según necesidades. 
