@@ -1,24 +1,24 @@
-# 📊 Experimento: `current_desired` → `linear_only`
+# Experimento: `current_desired` → `linear_only`
 
-## 📋 Descripción del Experimento
+##  Descripción del Experimento
 
 **Configuración**: Coordenadas Completas → Solo Velocidades Lineales  
-**Estado**: ✅ **MEJOR** (+97.5%)
+  **MEJOR** (+97.5%)
 
-### 🎯 Configuración de Features (Input)
+### Configuración de Features (Input)
 - **Tipo**: `current_desired` 
 - **Dimensión**: 16 valores
 - **Contenido**: Coordenadas actuales + deseadas
 - **Ventaja**: Información completa del estado del sistema
 - **Similitud**: Máxima información disponible
 
-### 🎯 Configuración de Targets (Output)  
+### Configuración de Targets (Output)  
 - **Tipo**: `linear_only`
 - **Dimensión**: 3 valores
 - **Contenido**: Velocidades lineales [vx, vy, vz]
 - **Enfoque**: Control translacional únicamente
 
-## 📊 Resultados del Entrenamiento
+## esultados del Entrenamiento
 
 ### Arquitectura del Modelo
 ```python
@@ -51,17 +51,11 @@ Regularization: BatchNorm + Dropout(0.3)
 - **Optimizador**: Adam + ReduceLROnPlateau
 - **Criterio**: MSE Loss
 
-## 🏆 Resultados de la Comparación
 
-### Comparación vs IBVS Clásico
-
-| Métrica | IBVS Clásico | IBVS ML | Resultado |
-|---------|--------------|---------|-----------|
-
-### 🎯 **RESULTADO**
+### **RESULTADO**
 ML es 97.5% mejor que el método clásico
 
-## 📈 Archivos Generados
+## Archivos Generados
 
 ### Modelo
 - `modelo/fnn_best.pth` - Estado del modelo entrenado
