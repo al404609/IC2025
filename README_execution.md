@@ -75,11 +75,6 @@ python classical_vs_ml_comparison.py --model-path ../results/modelo --model-type
   - Componentes de velocidad
   - Trayectoria de cámara 3D
 
-### 4. Documentación
-- Crea README específico por experimento
-- Genera archivo JSON con métricas
-- Organiza archivos en estructura jerárquica
-
 ## Estructura de Resultados
 
 ```
@@ -118,72 +113,15 @@ experiments_results/
 
 ## Mejor Modelo Encontrado
 
-### Configuración Ganadora
+### Configuración Mejor
 - **Features**: `current_desired` (16 valores)
 - **Targets**: `linear_only` (3 valores)
 - **Arquitectura**: FNN [16] → [64] → [32] → [3]
 - **Mejora**: 97.5% sobre IBVS clásico
 
-### Especificaciones Técnicas
+### Especificaciones
 - **Regularización**: Dropout 0.3 + BatchNorm
 - **Activación**: ReLU
 - **Inicialización**: Xavier Uniform
 - **Parámetros**: 3,267 total
 - **Entrenamiento**: 6 épocas, 148.56 segundos
-
-## Dependencias
-
-### Librerías Principales
-- **RVC3**: Robotics Vision and Control Library
-- **PyTorch**: Framework de deep learning
-- **NumPy**: Computación numérica
-- **Matplotlib**: Visualización
-- **SpatialMath**: Matemáticas espaciales
-
-### Módulos Internos
-- **core.simulation**: Motor de simulación IBVS
-- **core.ml_controller**: Controlador IBVS basado en ML
-- **models.architectures**: Arquitecturas de redes neuronales
-- **config.settings**: Configuraciones del sistema
-
-## Reproducibilidad
-
-### Semilla Aleatoria
-- **Valor fijo**: 42 para reproducibilidad
-- **Aplicada a**: NumPy, PyTorch, generación de datos
-
-### Condiciones Controladas
-- **Posición de cámara**: Fija para comparaciones
-- **Puntos target**: Generados consistentemente
-- **Parámetros IBVS**: Valores estándar del RVC3
-
-## Limitaciones y Consideraciones
-
-### Limitaciones Actuales
-- Solo arquitectura FNN implementada completamente
-- Dataset limitado a configuraciones específicas
-- Comparación en condiciones simuladas únicamente
-
-### Posibles Mejoras
-- Implementar LSTM y ResNet completos
-- Ampliar dataset con más variabilidad
-- Probar en condiciones de hardware real
-- Optimizar hiperparámetros automáticamente
-
-## Resultados Históricos
-
-### Experimentos Ejecutados
-- **Fecha**: 2024-2025
-- **Total configuraciones**: 6
-- **Mejor resultado**: 97.5% mejora
-- **Tiempo total**: ~2 horas de experimentación
-
-### Hallazgos Principales
-1. **Información completa es clave**: `current_desired` supera a `current_only`
-2. **Simplicidad funciona**: `linear_only` supera a `all_velocities`
-3. **FNN es suficiente**: Arquitectura simple pero efectiva
-4. **Regularización importante**: Dropout y BatchNorm mejoran generalización
-
-## Contacto y Mantenimiento
-
-Este sistema fue desarrollado como parte del proyecto de investigación en IBVS neuronal. Para preguntas o mejoras, consultar la documentación principal del proyecto. 
