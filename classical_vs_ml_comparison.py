@@ -192,13 +192,13 @@ def test_ml_ibvs(model_path="models/trained", model_type="fnn"):
         print("Ejecutando IBVS basado en ML...")
         
         # Ejecutar paso a paso para mejor control
-        for step in range(100):  # Permitir más pasos en caso de que ML lo necesite
+        for step in range(100):  
             status = ml_ibvs.step(step)
             
-            if status == 1:  # Convergido
+            if status == 1:  # Convergido ok
                 print(f"Convergió en paso {step}")
                 break
-            elif status == -1:  # Error
+            elif status == -1:  # Error :(
                 print(f"Error en paso {step}")
                 break
         
@@ -459,7 +459,7 @@ def main():
         compare_results(classical_ibvs, ml_ibvs)
     
     print("\n" + "=" * 60)
-    print("Comparación completada!")
+    print("Comparación ok!")
     print("Todos los resultados guardados en carpeta .resources/:")
     print("  - classical_ibvs_results.png (análisis detallado de 4 paneles)")
     if ml_ibvs:
