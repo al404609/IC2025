@@ -63,7 +63,7 @@ class OrganizedExperimentRunner:
             result = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=self.base_dir)
             
             if result.returncode == 0:
-                logger.info(f"Entrenamiento exitoso: {feature_config} -> {target_config}")
+                logger.info(f"Entrenamiento ok: {feature_config} -> {target_config}")
                 return True
             else:
                 logger.error(f"Entrenamiento falló: {feature_config} -> {target_config}")
@@ -551,7 +551,7 @@ Model Type: {model_type.upper()}"""
         logger.info("\n" + "=" * 80)
         logger.info("TODOS LOS EXPERIMENTOS COMPLETADOS")
         logger.info("=" * 80)
-        logger.info(f"Exitosos: {successful}")
+        logger.info(f"ok: {successful}")
         logger.info(f"Fallidos: {failed}")
         logger.info(f"Resultados en: {self.results_dir}")
         
@@ -561,10 +561,7 @@ Model Type: {model_type.upper()}"""
         return successful, failed
     
     def update_main_readme(self):
-        """Actualizar README principal con resultados"""
-        # Aquí iría la lógica para actualizar el README principal
-        # con los resultados de todos los experimentos
-        logger.info("README principal actualizado")
+        pass
 
 def main():
     """Función principal"""
